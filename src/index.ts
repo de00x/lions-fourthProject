@@ -83,7 +83,7 @@ async function searchRepository() {
   const searchErrLengthClass = document.querySelectorAll(".searchErrLength");
 
   if (searchInput !== null) {
-    if (searchInput.value.length !== 0) {
+    if (searchInput.value.length > 1) {
       await fetch(
         `https://api.github.com/search/repositories?q=${searchInput.value}&per_page=10`
       )
@@ -96,7 +96,7 @@ async function searchRepository() {
     } else if (searchErrLengthClass.length === 0) {
       const searchErrLength = document.createElement("div");
       searchErrLength.className = "searchErrLength";
-      searchErrLength.innerHTML = "Введите хотя бы 1 символ";
+      searchErrLength.innerHTML = "Минимальное количество символов - 2";
       searchRepositoryContainer?.appendChild(searchErrLength);
     }
   }
