@@ -1,0 +1,105 @@
+@import "~normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+
+///
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+  font-family: Nunito;
+  background-color: rgb(17, 17, 17);
+}
+input,
+textarea {
+  outline: none;
+}
+///
+.mainWrapper {
+  max-width: 1920px;
+  padding-bottom: 5rem;
+}
+.searchRepositoryContainer {
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 1.5rem 2rem;
+  width: 50rem;
+  border-radius: 0.5rem;
+  background-color: #4141415e;
+  box-shadow: 0px 0px 10px 5px #696969;
+  transition: 0.3s box-shadow ease-in-out;
+}
+.searchForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.searchInput {
+  width: 90%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border: none;
+  color: #696969;
+  box-shadow: 0px 0px 10px 5px #fdfdfd;
+  transition: 0.3s box-shadow ease-in-out;
+  &:focus {
+    box-shadow: 0px 0px 10px 5px #aeaeae;
+  }
+  &::placeholder {
+    font-size: 14px;
+  }
+}
+.searchImg {
+  width: 35px;
+  cursor: pointer;
+}
+.foundResultsContainer {
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  padding-bottom: 1rem;
+  width: 50rem;
+  border-radius: 0.5rem;
+  background-color: #4141415e;
+  box-shadow: 0px 0px 10px 5px #696969;
+  transition: 0.3s box-shadow ease-in-out;
+}
+.foundName,
+.foundFullName,
+.foundDescription,
+.foundLogin,
+.foundId,
+.foundLink {
+  margin-bottom: 0.5rem;
+  color: #696969;
+}
+.foundAvatar {
+  width: 100px;
+}
+.foundLinkContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.foundLink {
+  color: #696969;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s color ease-in-out;
+  &:hover {
+    color: #3a3a3a;
+  }
+}
+.searchNothingFound,
+.searchErrLength {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  margin-top: 1rem;
+  color: #cc0000;
+}
+.searchErrLength {
+  font-size: 16px;
+}
